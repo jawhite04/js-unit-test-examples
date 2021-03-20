@@ -1,0 +1,28 @@
+{
+  "name": "js-unit-test-examples",
+  "version": "1.0.0",
+  "description": "Examples of good and bad unit tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jawhite04/js-unit-test-examples.git"
+  },
+  "author": "John White",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jawhite04/js-unit-test-examples/issues"
+  },
+  "homepage": "https://github.com/jawhite04/js-unit-test-examples#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-jest": "^24.3.2",
+    "jest": "^26.6.3",
+    "mocha": "^8.3.2",
+    "sinon": "^9.2.4"
+  }
+}
