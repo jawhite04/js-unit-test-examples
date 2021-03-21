@@ -5,6 +5,13 @@ Examples of good and bad unit tests.
 
 We've experienced some problematic patterns in tests. This repo exists to highlight these patterns in an easy-to-read format. Hopefully we can persuade others to consider these problematic patterns and adapt accordingly.
 
+- `src/destructuring.js`
+    - i've seen mocha not stub destructured objects; prove or disprove it here.
+- `src/selfInvoking.js`
+    - i've seen mocha be challenged with self-invoking code (due to, i think, how modules are loaded and cached). prove or disprove difficulty with self-invoking code here.
+- `src/common/*.js`
+    - these set up problems, but themselves are not intended to be problematic. the interactions with the callees is the problematic part.
+
 ## Dev: getting started
 
 ```
