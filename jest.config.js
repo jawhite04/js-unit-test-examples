@@ -16,6 +16,9 @@ const config = {
       statements: 90,
     },
   },
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>$1',
+  },
 };
 
 module.exports = config;

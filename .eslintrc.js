@@ -26,6 +26,13 @@ module.exports = {
         '**/*.j.spec.js',
       ],
       extends: 'plugin:jest/recommended',
+      settings: {
+        'import/resolver': {
+          jest: {
+            jestConfigFile: './jest.config.js',
+          },
+        },
+      },
       env: {
         node: true,
         jest: true,

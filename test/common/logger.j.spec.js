@@ -1,6 +1,6 @@
 describe('src/common/logger.js', () => {
   const calledWith = [1, 2, 3, 'abc'];
-  const logger = require('../../src/common/logger');
+  const logger = require('@/src/common/logger');
 
   describe('logger', () => {
     afterEach(() => {
