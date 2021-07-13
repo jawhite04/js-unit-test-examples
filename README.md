@@ -53,7 +53,9 @@ In a testing context, I'm not remarkably concerned -- Jest should be a dev depen
 
 Mocha/Chai/Sinon is a bit leaner.
 
-## Dev: getting started
+## Dev
+
+### Getting started
 
 ```
 npm install
