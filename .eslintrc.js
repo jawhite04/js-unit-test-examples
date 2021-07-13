@@ -19,13 +19,22 @@ module.exports = {
         node: true,
         mocha: true,
       },
-
+      rules: {
+        'global-require': 0,
+      },
     },
     {
       files: [
         '**/*.j.spec.js',
       ],
       extends: 'plugin:jest/recommended',
+      settings: {
+        'import/resolver': {
+          jest: {
+            jestConfigFile: './jest.config.js',
+          },
+        },
+      },
       env: {
         node: true,
         jest: true,
