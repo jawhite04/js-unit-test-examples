@@ -85,6 +85,11 @@ _(* within reason - in my opinion, node built-ins are in a gray area. A good rul
     - Use existing `*.j.spec.js` and `*.m.spec.js` test naming conventions.
     - Both `npm run test:mocha` and `npm run test:jest` must pass.
     - Test coverage shall remain 100% across the board.
+    - `npm run lint` shall find no errors or warnings. (Tip: try to follow what eslint is suggesting, instead of overriding a rule)
 1. As needed, update config files.
 1. Update README.md with a summary of the use case.
-1. Open a MR.
+1. Open a MR. Include:
+    - A summary of your update
+    - Results of `npm run test:mocha` and `npm run test:jest`
+    - Results of `npm run lint`
+    
