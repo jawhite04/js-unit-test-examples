@@ -6,8 +6,8 @@
   "scripts": {
     "test:mocha": "nyc mocha",
     "test:jest": "jest",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint": "eslint ./",
+    "lint:fix": "eslint ./ --fix"
   },
   "repository": {
     "type": "git",
