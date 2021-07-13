@@ -19,7 +19,9 @@ module.exports = {
         node: true,
         mocha: true,
       },
-
+      rules: {
+        'global-require': 0,
+      },
     },
     {
       files: [
