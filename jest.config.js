@@ -3,6 +3,7 @@ const config = {
   testMatch: [
     '**/*.j.spec.js',
   ],
+  clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: [
     './src/**/*.js',

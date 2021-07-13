@@ -7,5 +7,6 @@
     },
     "eslint.validate": [
         "javascript"
-    ]
+    ],
+    "jest.jestCommandLine": "npx jest"
 }
