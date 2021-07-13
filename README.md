@@ -9,7 +9,9 @@ Mocha/Chai/Sinon unit tests vs Jest unit tests; my preference is Jest.
 
 I've experienced some problematic patterns in tests. This repo exists to highlight these patterns in an easy-to-read format. Hopefully I can persuade others to consider these problematic patterns and adapt accordingly.
 
-#### `src/destructuring.js`
+## Unit testing use cases
+
+### `src/destructuring.js`
 ```js
 // assume foo.js looks like:
 const bar = { /* some object or something */ };
@@ -35,11 +37,11 @@ Sinon can handle dependencies which incorporate destructuring or dot notation in
 
 Jest just handles it.
 
-#### `src/selfInvoking.js`
+### `src/selfInvoking.js`
 
 I've seen Sinon be challenged with self-invoking code due to how modules are loaded and cached. Jest has features for module caching, making its tests more straightforward in this context.
 
-#### `src/common/*.js`
+### `src/common/*.js`
 
 These set up problems, but themselves are not intended to be problematic. the interactions with the callees is the problematic part.
 
