@@ -1,4 +1,4 @@
-describe('./src/wait.js', () => {
+describe('src/wait.js', () => {
   const mockLogger = {
     info: jest.fn(),
   };

@@ -2,16 +2,19 @@ const { expect } = require('chai');
 const sinon = require('sinon');
 const wait = require('../src/wait');
 
-describe('./src/wait.js', () => {
+describe('src/wait.js', () => {
   let clock;
   let setTimeoutSpy;
+
   before(() => {
     clock = sinon.useFakeTimers();
     setTimeoutSpy = sinon.spy(clock, 'setTimeout');
   });
+
   afterEach(() => {
     setTimeoutSpy.resetHistory();
   });
+
   after(() => {
     clock.restore();
   });
