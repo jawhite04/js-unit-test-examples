@@ -1,5 +1,6 @@
 const { expect } = require('chai');
 const sinon = require('sinon');
+const logger = require('../src/common/logger');
 const wait = require('../src/wait');
 
 describe('src/wait.js', () => {
@@ -18,6 +19,8 @@ describe('src/wait.js', () => {
   after(() => {
     clock.restore();
   });
+
+  sinon.stub(logger, 'info');
 
   it('calls setTimeout with a time to wait', async () => {
     // arrange
