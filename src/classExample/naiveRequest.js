@@ -3,8 +3,11 @@ const logger = require('../common/logger');
 const magic = (input = '') => (input % 2 === 0 ? 'even' : 'odd');
 
 class NaiveRequest {
-  setInput(input) {
+  constructor() {
     logger.info('NaiveRequest constructor called.');
+  }
+
+  setInput(input) {
     this.input = input;
     return this;
   }
