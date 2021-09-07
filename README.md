@@ -49,6 +49,8 @@ Provides Jest and Sinon mocking examples for node built-ins.
 
 See this directory's [readme.md](./src/classExample/readme.md).
 
+`src/classExample/naiveRequest.js` also contains a module-scoped function that is not exposed through the module's exports, potentially complicating tests. ([#8](https://github.com/jawhite04/js-unit-test-examples/issues/8) is to expand upon examples for this pattern) 
+
 ### `src/common/*.js`
 
 These set up problems, but themselves are not intended to be problematic. the interactions with the callees is the problematic part.
