@@ -1,20 +1,20 @@
-describe('src/dotNotation/dotNotation.js', () => {
+describe('src/classExample/usesClasses.js', () => {
   const expectedOutput = 'the output';
   const mockMethods = {
     send: jest.fn().mockReturnThis(),
     receiveAsync: jest.fn(async () => expectedOutput),
   };
   const mockNaiveService = jest.fn(() => mockMethods);
-  jest.mock('@/src/dotNotation/naiveService.js', () => mockNaiveService);
+  jest.mock('@/src/classExample/naiveService.js', () => mockNaiveService);
 
-  const dotNotation = require('@/src/dotNotation/dotNotation');
+  const usesClasses = require('@/src/classExample/usesClasses');
 
   it('can mock `send` and `receiveAsync`', async () => {
     // arrange
     const input = 'any value';
 
     // act
-    const response = await dotNotation(input);
+    const response = await usesClasses(input);
 
     // assert
     expect(response).toEqual(expectedOutput);

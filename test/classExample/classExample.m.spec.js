@@ -1,9 +1,9 @@
 const { expect } = require('chai');
 const sinon = require('sinon');
-const dotNotation = require('../../src/dotNotation/dotNotation');
-const NaiveService = require('../../src/dotNotation/naiveService');
+const usesClasses = require('../../src/classExample/usesClasses');
+const NaiveService = require('../../src/classExample/naiveService');
 
-describe('src/dotNotation/dotNotation.js', () => {
+describe('src/classExample/usesClasses.js', () => {
   afterEach(() => {
     sinon.restore();
   });
@@ -17,7 +17,7 @@ describe('src/dotNotation/dotNotation.js', () => {
     sinon.stub(NaiveService.prototype, 'send').returns(fakeRequest);
 
     // act
-    const response = await dotNotation(input);
+    const response = await usesClasses(input);
 
     // assert
     expect(response).to.equal(output);

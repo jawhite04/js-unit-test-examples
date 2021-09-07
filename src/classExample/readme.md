@@ -1,4 +1,4 @@
-The intent of `dotNotation.js`'s dependencies, `naiveService` and `naiveRequest`, is to appear loosely similar to how `aws-sdk`'s `.promise()` is used. For example:
+The intent of `usesClasses.js`'s dependencies, `naiveService` and `naiveRequest`, is to appear loosely similar to how `aws-sdk`'s `.promise()` is used. For example:
 
 ```js
 const AWS = require('aws-sdk');
@@ -6,7 +6,7 @@ const dc = new AWS.DynamoDB.DocumentClient();
 const response = await dc.query(param).promise();
 ```
 
-A similar pattern, albeit with a contrived implementation, is in `dotNotation.js`:
+A similar pattern, albeit with a contrived implementation, is in `usesClasses.js`:
 
 ```js
 const NaiveService = require('./naiveService');
