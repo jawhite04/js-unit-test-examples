@@ -14,6 +14,9 @@ const service = new NaiveService();
 const response = service.send(param).receiveAsync();
 ```
 
+Repeat calls to `service.send(...)` might invite the test author to create temporary/conditional mock implementations.
+
+
 In the case of both `aws-sdk` and `naiveService.js`, a kind of `Request` object is returned. Although it would be a useful development exercise for me, the unit tests gain nothing from an implementation of `NaiveService` that more closely matches the behavior of `aws-sdk`. 
 
 I found these links useful when learning about how `aws-sdk` works its magic.

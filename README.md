@@ -41,6 +41,14 @@ Jest just handles it.
 
 I've seen Sinon be challenged with self-invoking code due to how modules are loaded and cached. Jest has features for module caching, making its tests more straightforward in this context.
 
+### `src/wait.js`
+
+Provides Jest and Sinon mocking examples for node built-ins.
+
+### `src/classExample/*.js`
+
+See this directory's [readme.md](./src/classExample/readme.md).
+
 ### `src/common/*.js`
 
 These set up problems, but themselves are not intended to be problematic. the interactions with the callees is the problematic part.
