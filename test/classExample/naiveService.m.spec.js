@@ -1,5 +1,6 @@
 const { assert } = require('chai');
 const sinon = require('sinon');
+const logger = require('../../src/common/logger');
 
 describe('src/classExample/naiveService.js', () => {
   const setInput = sinon.fake();
@@ -12,6 +13,7 @@ describe('src/classExample/naiveService.js', () => {
   require.cache[require.resolve('../../src/classExample/naiveRequest')] = {
     exports: MockNaiveRequest,
   };
+  sinon.stub(logger, 'info');
   const NaiveService = require('../../src/classExample/naiveService');
 
   describe('constructor', () => {

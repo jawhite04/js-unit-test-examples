@@ -1,4 +1,9 @@
 describe('src/classExample/naiveService.js', () => {
+  const mockLogger = {
+    info: jest.fn(),
+  };
+  jest.mock('@/src/common/logger', () => mockLogger);
+
   const setInput = jest.fn();
   const MockNaiveRequest = class {
     constructor() {
