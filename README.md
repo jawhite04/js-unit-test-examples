@@ -1,6 +1,6 @@
 # js-unit-test-examples
 
-Examples of good and bad unit tests.
+Examples of unit tests. The source code is contrived to meet whatever circumstances are being demonstrated in tests.
 
 ## TLDR:
 Mocha/Chai/Sinon unit tests vs Jest unit tests; my preference is Jest.
