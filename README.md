@@ -85,7 +85,7 @@ npm install
 
 ### Unit tests: what is a "unit"?
 
-In this project, a unit is one file, a unit test tests one file. The module under test/unit under test shall have all* external dependencies mocked out.
+In this project, a unit is one export from a module; a module's unit tests test each of that module's exports. The module under test/unit under test shall have all* external dependencies mocked out.
 
 _(* within reason - in my opinion, node built-ins are in a gray area. A good rule of thumb: if it needs to be `require`d, mock it.)_
 
