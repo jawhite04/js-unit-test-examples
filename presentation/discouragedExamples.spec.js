@@ -1,8 +1,8 @@
 describe('discouraged unit test practices', () => {
   describe('playing golf with test coverage', () => {
-    // Code golf is a type of recreational computer programming competition
+    // "Code golf is a type of recreational computer programming competition
     // in which participants strive to achieve the shortest possible source
-    // code that implements a certain algorithm.
+    // code that implements a certain algorithm."  - Wikipedia
     const exampleSrc = (input) => {
       const fizz = input % 3 ? '' : 'Fizz';
       const buzz = input % 5 ? '' : 'Buzz';
