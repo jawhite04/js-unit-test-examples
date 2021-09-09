@@ -26,6 +26,7 @@ module.exports = {
     {
       files: [
         '**/*.j.spec.js',
+        './presentation/**/*.spec.js',
       ],
       extends: 'plugin:jest/recommended',
       settings: {
@@ -41,7 +42,7 @@ module.exports = {
       },
       rules: {
         'global-require': 0,
-        'import/no-extraneous-dependencies': ['error', { devDependencies: [''] }],
+        'import/no-extraneous-dependencies': 0,
       },
     },
   ],

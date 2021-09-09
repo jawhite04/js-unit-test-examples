@@ -6,6 +6,7 @@
   "scripts": {
     "test:mocha": "nyc mocha",
     "test:jest": "jest",
+    "test:presentation": "jest -c ./presentation/jest.config.js",
     "lint": "eslint ./",
     "lint:fix": "eslint ./ --fix"
   },
