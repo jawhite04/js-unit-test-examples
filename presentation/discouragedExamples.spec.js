@@ -14,6 +14,7 @@ describe('discouraged unit test practices', () => {
       expect(exampleSrc(15)).toEqual('FizzBuzz');
     });
   });
+
   describe('using `dotenv` in unit tests', () => {
     const path = require('path');
     require('dotenv').config({ path: path.resolve(process.cwd(), 'presentation/.env') });
