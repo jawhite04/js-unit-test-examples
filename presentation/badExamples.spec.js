@@ -1,10 +1,11 @@
 describe('universally wrong unit test practices', () => {
   describe('tests with no/improper assertions', () => {
-    /* eslint-disable jest/valid-expect, jest/expect-expect */
+    // eslint-disable-next-line jest/expect-expect
     it('should not create an empty test', () => {});
 
     it('should not misuse assertions', () => {
       const someTruthyValue = [];
+      // eslint-disable-next-line jest/valid-expect
       expect(someTruthyValue);
     });
 
@@ -43,6 +44,22 @@ describe('universally wrong unit test practices', () => {
 
       // assert
       expect(mockLogger.info).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('should not assert inside conditional statements', () => {
+    const throws = require('../src/common/throws');
+    it('misuses try-catch', () => {
+      // arrange
+      const message = 'from the test';
+
+      // act & assert
+      try {
+        throws(message);
+      } catch (e) {
+        // eslint-disable-next-line jest/no-conditional-expect, jest/no-try-expect
+        expect(e.message).toEqual(message);
+      }
     });
   });
 });
