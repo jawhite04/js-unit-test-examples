@@ -1,6 +1,6 @@
 # js-unit-test-examples
 
-Examples of good and bad unit tests.
+Examples of unit tests. The source code is contrived to meet whatever circumstances are being demonstrated in tests.
 
 ## TLDR:
 Mocha/Chai/Sinon unit tests vs Jest unit tests; my preference is Jest.
@@ -47,6 +47,16 @@ Ideally, application source code is not where environment selection is being man
 
 Exceptions exist. For example, a native mobile app might use a compiler directive to expose UI testing hooks.
 
+### `src/wait.js`
+
+Provides Jest and Sinon mocking examples for node built-ins.
+
+### `src/classExample/*.js`
+
+See this directory's [readme.md](./src/classExample/readme.md).
+
+`src/classExample/naiveRequest.js` also contains a module-scoped function that is not exposed through the module's exports, potentially complicating tests. ([#8](https://github.com/jawhite04/js-unit-test-examples/issues/8) is to expand upon examples for this pattern) 
+
 ### `src/common/*.js`
 
 These set up problems, but themselves are not intended to be problematic. the interactions with the callees is the problematic part.
@@ -81,7 +91,7 @@ npm install
 
 ### Unit tests: what is a "unit"?
 
-In this project, a unit is one file, a unit test tests one file. The module under test/unit under test shall have all* external dependencies mocked out.
+In this project, a unit is one export from a module; a module's unit tests test each of that module's exports. The module under test/unit under test shall have all* external dependencies mocked out.
 
 _(* within reason - in my opinion, node built-ins are in a gray area. A good rule of thumb: if it needs to be `require`d, mock it.)_
 
