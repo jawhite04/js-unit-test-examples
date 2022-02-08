@@ -41,6 +41,12 @@ Jest just handles it.
 
 I've seen Sinon be challenged with self-invoking code due to how modules are loaded and cached. Jest has features for module caching, making its tests more straightforward in this context.
 
+### `src/testAware.js`
+
+Ideally, application source code is not where environment selection is being managed. Environment-specific values should be provided by the build system and code should use the value provided irrespective of environment.
+
+Exceptions exist. For example, a native mobile app might use a compiler directive to expose UI testing hooks.
+
 ### `src/common/*.js`
 
 These set up problems, but themselves are not intended to be problematic. the interactions with the callees is the problematic part.
